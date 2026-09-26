@@ -98,17 +98,19 @@
 export const StarBackground = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      <div className="absolute top-[-15%] left-[-10%] w-[45vw] h-[45vw] max-w-[600px] max-h-[600px] bg-primary/20 rounded-full blur-3xl animate-float" />
+      
+      <div className="absolute top-[-15%] left-[-10%] w-[45vw] h-[45vw] max-w-[600px] max-h-[600px] bg-purple-500/20 rounded-full blur-3xl animate-float" />
 
       <div
-        className="absolute bottom-[-20%] right-[-10%] w-[55vw] h-[55vw] max-w-[700px] max-h-[700px] bg-primary/10 rounded-full blur-3xl animate-float"
+        className="absolute bottom-[-20%] right-[-10%] w-[55vw] h-[55vw] max-w-[700px] max-h-[700px] bg-purple-500/10 rounded-full blur-3xl animate-float"
         style={{ animationDelay: "1.5s" }}
       />
 
       <div
-        className="absolute top-[30%] right-[15%] w-[25vw] h-[25vw] max-w-[350px] max-h-[350px] bg-primary/15 rounded-full blur-3xl animate-float"
+        className="absolute top-[30%] right-[15%] w-[25vw] h-[25vw] max-w-[350px] max-h-[350px] bg-purple-500/15 rounded-full blur-3xl animate-float"
         style={{ animationDelay: "3s" }}
       />
+
     </div>
   );
 };

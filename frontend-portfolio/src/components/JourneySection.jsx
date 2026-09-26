@@ -6,9 +6,9 @@ import { certifications } from "@/data/certifications";
 import { codingPractice } from "@/data/journey";
 
 const tabs = [
-  { id: "education", label: "Education", icon: GraduationCap },
   { id: "certifications", label: "Certifications", icon: Award },
   { id: "coding", label: "Coding Practice", icon: Code2 },
+  { id: "education", label: "Education", icon: GraduationCap },
 ];
 
 export const JourneySection = () => {
@@ -48,33 +48,7 @@ export const JourneySection = () => {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          {activeTab === "education" && (
-            <div className="space-y-6">
-              {education.map((item) => (
-                <div
-                  key={item.id}
-                  className="gradient-border p-6 card-hover text-left"
-                >
-                  <div className="flex items-start justify-between gap-4 flex-wrap">
-                    <div>
-                      <h4 className="font-semibold text-lg">{item.degree}</h4>
-                      <p className="text-muted-foreground">{item.institution}</p>
-                      {item.description && (
-                        <p className="text-sm text-muted-foreground mt-2">
-                          {item.description}
-                        </p>
-                      )}
-                    </div>
-                    {item.period && (
-                      <span className="text-sm font-medium text-primary whitespace-nowrap">
-                        {item.period}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
+          
 
           {activeTab === "certifications" && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -128,6 +102,36 @@ export const JourneySection = () => {
                 )}
             </div>
           )}
+
+
+          {activeTab === "education" && (
+            <div className="space-y-6">
+              {education.map((item) => (
+                <div
+                  key={item.id}
+                  className="gradient-border p-6 card-hover text-left"
+                >
+                  <div className="flex items-start justify-between gap-4 flex-wrap">
+                    <div>
+                      <h4 className="font-semibold text-lg">{item.degree}</h4>
+                      <p className="text-muted-foreground">{item.institution}</p>
+                      {item.description && (
+                        <p className="text-sm text-muted-foreground mt-2">
+                          {item.description}
+                        </p>
+                      )}
+                    </div>
+                    {item.period && (
+                      <span className="text-sm font-medium text-primary whitespace-nowrap">
+                        {item.period}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
         </div>
       </div>
     </section>

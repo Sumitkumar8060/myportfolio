@@ -120,13 +120,12 @@ export const HeroSection = () => {
               {personal.tagline}
             </p>
 
-            <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+            <div className="pt-4 flex gap-4 opacity-0 animate-fade-in-delay-4">
               <a href="#projects" className="cosmic-button">
                 View My Work
               </a>
               
-              {personal.resumeUrl ? (
-                <a
+              <a
                   href={personal.resumeUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -134,14 +133,7 @@ export const HeroSection = () => {
                 >
                   Download CV
                 </a>
-              ) : (
-                <a
-                  href="#journey"
-                  className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
-                >
-                  View My Journey
-                </a>
-              )}
+              
                 
             </div>
 

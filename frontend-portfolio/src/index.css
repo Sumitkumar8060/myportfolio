@@ -18,6 +18,7 @@
   --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
   --animate-meteor: meteor 5s linear infinite;
+  --animate-grid-move: grid-move 8s linear infinite;
 
   @keyframes float {
     0%,
@@ -47,6 +48,14 @@
       transform: translateY(0);
     }
   }
+    @keyframes grid-move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 28px 28px;
+    }
+  }
   @keyframes meteor {
     0% {
       transform: rotate(215deg) translateX(0);
@@ -70,8 +79,10 @@
     --card: 0 0% 100%;
 
     /* --primary: 0 72% 51%; */
-    --primary: 347 77% 50%;
+    /* --primary: 347 77% 50%; */
+        --primary: 258 90% 66%;
     --primary-foreground: 210 40% 98%;
+    --background-accent: 262 83% 58%;
 
     --border: 214 32% 91%;
   }
@@ -83,8 +94,10 @@
     --card: 222 47% 8%;
 
     /* --primary: 0 84% 60%; */
-    --primary: 350 89% 60%;
+        --primary: 258 90% 66%;
+    /* --primary: 350 89% 60%; */
     --primary-foreground: 213 31% 91%;
+    --background-accent: 258 90% 66%;
 
     --border: 217 33% 20%;
   }
@@ -126,7 +139,7 @@
 
 @utility text-glow {
   @apply relative;
-  text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+    /* text-shadow: 0 0 10px rgba(167, 139, 250, 0.5); */
 }
 
 @utility card-hover {
@@ -142,8 +155,8 @@
 
 @utility cosmic-button {
   @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
-         transition-all duration-300 hover:shadow-[0_0_10px_rgba(239,68,68,0.5)]
-         hover:scale-105 active:scale-95;
+  transition-all duration-300 hover:shadow-[0_0_10px_rgba(167,139,250,0.5)]
+  hover:scale-105 active:scale-95;
 }
 
 @utility star {
