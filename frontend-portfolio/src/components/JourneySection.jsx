@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { GraduationCap, Award, Code2, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { education } from "@/data/education";
 import { certifications } from "@/data/certifications";
 import { codingPractice } from "@/data/journey";
+import { education } from "@/data/education";
+
 
 const tabs = [
   { id: "certifications", label: "Certifications", icon: Award },
@@ -12,7 +13,7 @@ const tabs = [
 ];
 
 export const JourneySection = () => {
-  const [activeTab, setActiveTab] = useState("education");
+  const [activeTab, setActiveTab] = useState("certifications");
 
   return (
     <section id="journey" className="py-24 px-4 relative">

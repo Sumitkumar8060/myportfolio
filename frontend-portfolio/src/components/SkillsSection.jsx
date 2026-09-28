@@ -113,13 +113,13 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {visibleSkills.map((skill, key) => {
             const Icon = skill.icon;
             return (
               <div
                 key={key}
-                className="bg-card px-4 py-4 rounded-lg shadow-xs card-hover flex flex-col items-center justify-center gap-2 text-center opacity-0 animate-fade-in"
+                className="bg-card px-1 py-4 rounded-lg shadow-xs card-hover flex flex-col items-center justify-center gap-2 text-center opacity-0 animate-fade-in"
               >
                 {Icon && <Icon className="h-6 w-6 text-primary" />}
                 <span className="font-medium">{skill.name}</span>

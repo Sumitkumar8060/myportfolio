@@ -22,20 +22,22 @@ export const Navbar = () => {
   const { isDarkMode, toggleTheme } = useTheme();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
-    };
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 10);
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
   return (
     <nav
-      className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-      )}
-    >
+  className={cn(
+    "fixed w-full z-40 transition-all duration-300",
+    isScrolled
+      ? "py-3 lightb backdrop-blur-md shadow-sm"
+      : "py-5 bg-transparent"
+  )}
+>
       <div className="container flex items-center justify-between">
         <a
           className="text-xl font-bold text-primary flex items-center"
